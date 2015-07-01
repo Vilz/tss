@@ -1,0 +1,40 @@
+.clearfix() {
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+
+html {
+  font-family: @ffLight;
+}
+a {
+  color:@black;
+  transition: color 0.2s ease;
+  &:hover {
+    color:@red;
+  }
+}
+#mfPreviewBar {
+  display: none!important;
+
+}
+/*
+
+font-family: 'PF Din Display Pro Medium'
+font-family: 'PF Din Display Pro Bold'
+font-family: 'PF Din Display Pro Light'
+font-family: 'PF Din Display Pro'
+
+*/
+.container {
+  position: relative;
+  margin:0 auto;
+  padding: 0 20px;
+  width: 1420px;
+}
