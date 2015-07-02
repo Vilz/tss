@@ -1,0 +1,27 @@
+.btn {
+  display:inline-block;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  text-align: center;
+  border:0;
+  font-size: 20px;
+  min-width: 220px;
+  line-height: 48px;
+  height: 44px;
+  padding:0 20px;
+  color:@white;
+  background: @black;
+  text-decoration: none;
+  font-family: @ffThin;
+  &:hover {
+    color:@white;
+  }
+  &.transparent {
+    background: rgba(0,0,0,0.33);
+    border:2px solid @white;
+    line-height: 44px;
+  }
+  &.red {
+    background: @red;
+  }
+}

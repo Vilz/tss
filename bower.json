@@ -13,6 +13,7 @@
   "dependencies": {
     "normalize.css": "*",
     "jquery": "2.*",
-    "retinajs": "~1.3.0"
+    "retinajs": "~1.3.0",
+    "masonry": "~3.3.1"
   }
 }

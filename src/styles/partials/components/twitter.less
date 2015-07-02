@@ -1,0 +1,33 @@
+.twitter {
+  margin:60px 0;
+  .container {}
+  &-post {
+    background-color: @white;
+    box-shadow:0 1px 3px rgba(0,0,0,0.14);
+    width:650px;
+    float:right;
+    height:400px;
+    position: relative;
+    box-sizing: border-box;
+    &:first-child {
+      float:left;
+      &:after{
+        content:"";
+        position: absolute;
+        top:15px;
+        bottom:15px;
+        left:100%;
+        width:1px;
+        background-color: #dbdbdb;
+        margin-left:60px;
+
+      }
+    }
+    &-wrapper {
+      .clearfix();
+      padding:60px 0;
+      border-top:1px solid #dddddd;
+      border-bottom:1px solid #dddddd;
+    }
+  }
+}
