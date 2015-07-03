@@ -147,6 +147,10 @@
     position: absolute;
     float:none;
   }
+  .tile-content {
+    width:100%;
+    height:100%;
+  }
   .tile-1 {
     top:0;
     left:0;
@@ -166,5 +170,98 @@
   .tile-5 {
     top:270px;
     left:870px;
+  }
+}
+
+.offer-tile {
+  &-content {
+    color:@white;
+    position: relative;
+    width:100%;
+    height:100%;
+  }
+  &-img {
+    width:100%;
+    height:100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  &-description {
+    position: absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    box-sizing: border-box;
+    padding:20px 25px;
+    background-color: rgba(0,0,0,0.8);
+    .w1.h1 & {
+      padding-right: 70px;
+    }
+    .w3 & {
+      padding-right: 300px;
+    }
+    .w2 & {
+      padding-right: 180px;
+    }
+  }
+  &-title {
+    font-family: @ffMedium;
+    font-size: 20px;
+    margin-bottom: 10px;
+    .w3 & {
+      font-size: 30px;
+    }
+  }
+  &-text {
+    font-size: 15px;
+    font-family: @ffLight;
+    .w3 & {
+      font-size: 16px;
+    }
+    .w1.h1 & {
+      display: none;
+    }
+  }
+  &-more {
+    position: absolute;
+    bottom:20px;
+    right:25px;
+    .btn {
+      display: inline-block;
+    }
+    .ico {
+      display: none;
+    }
+
+    .w1 & {
+      bottom:auto;
+      top:50%;
+      margin-top: -13px;
+      .btn {
+        display: none;
+      }
+      .ico {
+        display: block;
+      }
+    }
+    .w2 & {
+      .btn {
+        border-width: 1px;
+        font-size: 12px;
+        line-height: 24px;
+        height:24px;
+        min-width: 130px;
+      }
+    }
+    .w2.h2 & {
+      .btn {
+        border-width: 1px;
+        font-size: 12px;
+        line-height: 65px;
+        height:65px;
+        min-width: 130px;
+      }
+    }
   }
 }

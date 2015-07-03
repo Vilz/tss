@@ -1,6 +1,7 @@
 .blog-container {
   .grid {
     margin-top:60px;
+    margin-bottom:45px;
     .clearfix();
     .tile {
       float:left;
@@ -15,13 +16,75 @@
       &.w2 {
         width:559px;
       }
-
       &.h1 {
         height:400px;
       }
       &.h2 {
         height:815px;
       }
+
+    }
+  }
+}
+
+.blog-tile {
+  &-content {
+    padding:30px;
+    position: relative;
+    transition: color 0.2s ease-in-out, background 0.2s ease-in-out;
+    &:hover {
+      background-color: @red;
+      color:@white;
+      a {
+        color:@white;
+      }
+    }
+    .h1 & {
+      height: 340px;
+    }
+    .h2 & {
+      height:(815px-60px);
+    }
+  }
+  &-head {
+    border-bottom:1px solid #cccccc;
+    padding-bottom:20px;
+    margin-bottom:20px;
+    font-size: 30px;
+    line-height: 28px;
+    min-height: 56px;
+    font-family: @ffThinItalic;
+    .w2.h2 & {
+      font-size: 60px;
+      line-height: 60px;
+    }
+  }
+  &-image {
+    margin:30px 0 10px;
+    img {
+      max-width: 100%;
+      .w1.h1 & {
+        max-height: 110px;
+      }
+    }
+  }
+  &-text {
+    font-size: 17px;
+    line-height: 26px;
+    font-family: @ffThin;
+    p {
+      margin:10px 0 15px;
+    }
+  }
+  &-more {
+    position: absolute;
+    bottom:30px;
+    left:30px;
+    margin-top:15px;
+    a {
+      color:@red;
+      font-family: @ffThin;
+      font-size: 20px;
 
     }
   }
