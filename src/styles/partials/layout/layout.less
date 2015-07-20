@@ -44,4 +44,38 @@ font-family: 'PF Din Display Pro'
 }
 
 
+.grid {
+  position: relative;
+  height: 690px;
+}
+.tile {
+  position: absolute;
+  float:none;
+  &.min-tile {
+    height:0!important;
+    opacity: 0!important;
+    margin-bottom: 0!important;
+  }
+}
 
+
+
+
+
+
+@media only screen and (min-width : @desktop-min) and (max-width : @desktop-max)  {
+  html, body {
+    min-width: 1020px;
+    background: @bggray;
+  }
+  .container {
+    position: relative;
+    margin:0 auto;
+    padding: 0 20px;
+    width: 980px;
+  }
+}
+
+@media only screen and (max-width : @tablet-album-max)  {
+
+}

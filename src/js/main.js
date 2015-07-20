@@ -17,15 +17,19 @@
 
 
 $(document).ready(function(){
+
+  var offersContainer = document.querySelector('.offers-container .grid');
   $('.offers-container .grid').masonry({
-    // options...
-    itemSelector: '.tile',
-    columnWidth: 290
+    columnWidth: offersContainer.querySelector('.min-tile'),
+    itemSelector:'.tile',
+    gutter:0,
+    percentPosition: false
   });
+  var blogContainer = document.querySelector('.blog-container .grid');
   $('.blog-container .grid').masonry({
-    // options...
-    itemSelector: '.tile',
-    columnWidth: 272,
-    gutter:14
-  });
+    columnWidth: blogContainer.querySelector('.min-tile'),
+    itemSelector:'.tile',
+    gutter:0,
+    percentPosition: false
+  })
 })
