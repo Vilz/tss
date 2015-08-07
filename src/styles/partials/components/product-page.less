@@ -1,0 +1,487 @@
+.product {
+  &-page {
+
+  }
+  &-teaser {
+    height:590px;
+    background-image:url("@{img}content/product-page/teaser.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin-bottom: 30px;
+
+  &.vpn {
+    background-image:url("@{img}content/product-page/teaser-vpn.jpg");
+  }
+    &-content{
+      padding:100px 380px 30px 0;
+      border-bottom:1px solid #dbdbdb;
+      min-height:455px
+    }
+    h1 {
+      margin:0;
+      font-size: 62px;
+      line-height: 54px;
+      font-family: @ffThin;
+      font-weight: normal;
+      strong {
+        font-weight: bold;
+        font-family: @ffBold;
+        display: block;
+      }
+
+    }
+    &-text {
+      font-size: 20px;
+      width:520px;
+      font-family: @ffMedium;
+      color:#707070;
+    }
+    &-subtext {
+      font-size: 20px;
+      width:520px;
+      font-family: @ffThin;
+      color:#000;
+    }
+
+  }
+  &-models {
+
+    &-content {
+      padding-bottom:30px;
+      margin-bottom: 30px;
+      border-bottom:1px solid #dbdbdb;
+      .clearfix();
+    }
+
+    h2 {
+      font-size: 30px;
+      font-family: @ffBold;
+    }
+    &-item {
+      margin: 50px 0 20px;
+      border-left:1px solid #dbdbdb;
+      width:33%;
+      float:left;
+      height:240px;
+
+      &:first-of-type {
+        border-left:none;
+
+      }
+      &-head {
+        text-align: center;
+        font-size: 50px;
+        line-height: 50px;
+        vertical-align: middle;
+        font-family: @ffBold;
+        color:@red;
+        margin-bottom: 30px;
+        img{
+          line-height: 50px;
+          vertical-align: middle;
+        }
+        span {
+          position: relative;
+          top:3px;
+          display: inline-block;
+          line-height: 50px;
+          vertical-align: middle;
+        }
+        .product-models-item:first-of-type & {
+          margin-left:-25px;
+        }
+      }
+      &-text {
+        padding:0 25px;
+        .product-models-item:first-of-type &{
+          padding-left: 0;
+        }
+        h3 {
+          margin: 0;
+          font-size: 17px;
+          font-family: @ffMedium;
+          color:#707070;
+          span{
+            font-size: 15px;
+          }
+        }
+        p {
+          color:#000;
+          font-size: 17px;
+          font-family: @ffThin;
+        }
+      }
+    }
+  }
+  &-benefits {
+    &-item {
+      padding: 40px 0;
+      border-bottom:1px solid #dbdbdb;
+      .clearfix();
+      &-img {
+        text-align: center;
+        width:50%;
+        .left & {
+          float:left;
+        }
+        .right & {
+          float:right;
+        }
+      }
+      &-content {
+        width:50%;
+        .left & {
+          float:left;
+        }
+        .right & {
+          float:right;
+        }
+        h2 {
+          font-size: 26px;
+          color:#000;
+          margin: 0;
+          font-family: @ffBold;
+          line-height: 25px;
+
+        }
+        p {
+          font-size: 17px;
+          font-family: @ffThin;
+          color:#000;
+          margin:25px 0;
+          b{
+            font-family: @ffMedium;
+            color:#707070;
+          }
+        }
+      }
+    }
+
+  }
+  &-resources {
+    h2 {
+      font-size: 30px;
+      font-family: @ffBold;
+      margin:70px 0 50px;
+    }
+    &-wrapper {
+      .clearfix();
+    }
+    &-menu {
+      width:240px;
+      float:left;
+      a {
+        display: block;
+        position: relative;
+        font-size: 24px;
+        color:#707070;
+        font-family: @ffMedium;
+        padding:5px 0;
+        margin: 5px 0;
+        text-decoration: none;
+        transition:color 0.3s ease-in-out, padding-left 0.15s ease-in-out;
+        &:before {
+          content:"";
+          display: block;
+          position: absolute;
+          top:50%;
+          left:-40px;
+          width:10px;
+          height:8px;
+          margin:-4px 0 0;
+          border-radius: 3px;
+          opacity: 0;
+          transition: opacity 0.15s linear, left 0.15s ease-in-out;
+          background:@red;
+        }
+        &:hover, &.active {
+          padding-left:20px;
+          color:@red;
+          &:before {
+            opacity:1;
+            left:0;
+          }
+        }
+
+      }
+    }
+    &-content {
+      float:left;
+      width:740px;
+    }
+    &-item {
+        display: none;
+        &.active {
+          display: block;
+        }
+    }
+    &-sertificate {
+      .clearfix();
+      margin: 0 0 30px;
+      &-text {
+        float:left;
+        width: 500px;
+        h3 {
+          margin: 0;
+          font-size: 20px;
+          font-family: @ffMedium;
+          color:#707070;
+        }
+        p {
+          color:#000;
+          font-size: 20px;
+          font-family: @ffThin;
+        }
+      }
+      &-img {
+        width:240px;
+        float:left;
+        text-align: center;
+        img {
+          //box-shadow: 4px 4px 0px -2px #6a8683;
+        }
+      }
+      &-download {
+        border-top:1px solid #dbdbdb;
+        margin-top:15px;
+        padding-top:15px;
+        a {
+          position: relative;
+          color:#6a8683;
+          font-size: 20px;
+          font-family: @ffThin;
+          padding-left:45px;
+          &:before {
+            content:"";
+            display: block;
+            position: absolute;
+            width:31px;
+            height:31px;
+            top:50%;
+            left:0;
+            margin-top:-15px;
+            background:url("@{img}content/product-page/download-ico.png") center center no-repeat;
+          }
+          span {
+            font-family: @ffBold;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width : @large-desktop)  {
+  .product {
+    &-teaser {
+      height:800px;
+      background-image:url("@{img}content/product-page/teaser@2x.jpg");
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      &.vpn {
+        background-image:url("@{img}content/product-page/teaser-vpn@2x.jpg");
+      }
+
+      &-content{
+        padding:150px 580px 30px 0px;
+        min-height:615px
+      }
+      h1 {
+        font-size: 80px;
+        line-height: 74px;
+
+      }
+      &-text {
+        font-size: 24px;
+        width:620px;
+      }
+      &-subtext {
+        font-size: 24px;
+        width:620px;
+      }
+    }
+    &-models {
+      h2 {
+        font-size: 40px;
+        font-family: @ffBold;
+      }
+      &-item {
+        margin: 50px 0 20px;
+        border-left:1px solid #dbdbdb;
+        width:33%;
+        float:left;
+        height:300px;
+
+        &-head {
+          font-size: 60px;
+          img{
+            transform: scale(1.2);
+            line-height: 50px;
+          }
+          span {
+            margin-left: 10px;
+          }
+        }
+        &-text {
+          padding:0 40px;
+          .product-models-item:first-of-type &{
+            padding-left: 0;
+          }
+          h3 {
+            margin: 0;
+            font-size: 24px;
+            font-family: @ffRegular;
+            span{
+              font-size: 22px;
+            }
+          }
+          p {
+            color:#000;
+            font-size: 24px;
+            font-family: @ffThin;
+          }
+        }
+      }
+    }
+    &-benefits {
+      &-item {
+        padding: 40px 0;
+        border-bottom:1px solid #dbdbdb;
+        .clearfix();
+        &-img {
+          text-align: center;
+          width:50%;
+          .left & {
+            float:left;
+          }
+          .right & {
+            float:right;
+          }
+        }
+        &-content {
+          width:50%;
+          .left & {
+            float:left;
+          }
+          .right & {
+            float:right;
+          }
+          h2 {
+            font-size: 36px;
+            color:#000;
+            margin: 0;
+            font-family: @ffBold;
+            line-height: 35px;
+
+          }
+          p {
+            font-size: 27px;
+            font-family: @ffThin;
+            color:#000;
+            margin:25px 0;
+            b{
+              font-family: @ffMedium;
+              color:#707070;
+            }
+          }
+        }
+      }
+
+    }
+    &-resources {
+      h2 {
+        font-size: 40px;
+        font-family: @ffBold;
+        margin:70px 0 70px;
+      }
+      &-menu {
+        width:320px;
+        a {
+          font-size: 30px;
+          &:before {
+            top:50%;
+            left:-40px;
+            width:14px;
+            height:10px;
+            margin:-7px 0 0;
+            border-radius: 4px;
+          }
+          &:hover, &.active {
+            padding-left:27px;
+            color:@red;
+            &:before {
+              opacity:1;
+              left:0;
+            }
+          }
+
+        }
+      }
+      &-content {
+        float:left;
+        width:1100px;
+      }
+      &-item {
+
+      }
+      &-sertificate {
+        .clearfix();
+        margin: 0 0 30px;
+        &-text {
+          float:left;
+          width: 780px;
+          h3 {
+            margin: 0;
+            font-size: 28px;
+            font-family: @ffMedium;
+            color:#707070;
+          }
+          p {
+            color:#000;
+            font-size: 24px;
+            font-family: @ffThin;
+          }
+        }
+        &-img {
+          width:320px;
+          float:left;
+          text-align: center;
+          img {
+            //box-shadow: 4px 4px 0px -2px #6a8683;
+          }
+        }
+        &-download {
+          border-top:1px solid #dbdbdb;
+          margin-top:15px;
+          padding-top:15px;
+          a {
+            position: relative;
+            color:#6a8683;
+            font-size: 24px;
+            font-family: @ffThin;
+            padding-left:45px;
+            &:before {
+              content:"";
+              display: block;
+              position: absolute;
+              width:31px;
+              height:31px;
+              top:50%;
+              left:0;
+              margin-top:-15px;
+              background:url("@{img}content/product-page/download-ico.png") center center no-repeat;
+            }
+            span {
+              font-family: @ffBold;
+            }
+          }
+        }
+      }
+    }
+
+
+  }
+
+
+}

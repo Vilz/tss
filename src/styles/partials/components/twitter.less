@@ -1,3 +1,358 @@
 .twitter {
+  &-content {
+    padding:20px;
+    height: calc(~"100% - 40px");
+    h3 {
+      font-family: @ffBold;
+      font-size: 33px;
+      margin:0;
+    }
+  }
+  &-head {
+    position: relative;
+    padding-bottom:45px;
+    border-bottom:1px solid #cccccc;
+    margin-bottom:20px;
+    &-follow {
+      position: absolute;
+      bottom: 10px;
+      right:0;
+      padding: 4px 10px 2px;
+      background: #fcfcfc; /* Old browsers */
+      background: linear-gradient(to bottom,  #fcfcfc 0%,#dedede 100%); /* W3C */
+      box-shadow:0px 0px 5px rgba(0,0,0,0.4);
+      border-radius:4px;
+      text-decoration: none;
+      font-family: @ffBold;
+      &:before {
+        content:"";
+        width:21px;
+        height:18px;
+        display: inline-block;
+        background:url("@{img}ico-twitter.png") center center no-repeat;
+        position: relative;
+        margin-right:4px;
+        top:4px;
+      }
+    }
+    &-userid {
+      color:@red;
+      font-size: 18px;
+      font-family: @ffRegular;
+      position: absolute;
+      bottom: 10px;
+      left:0;
+    }
 
+  }
+
+  &-feed {
+    position: relative;
+    overflow-y: scroll;
+    margin-right:-15px;
+    padding-right:15px;
+    height:calc(~"100% - 180px");
+  }
+  &-post {
+    .clearfix();
+    &-head {
+      position: relative;
+      padding-bottom:15px;
+      display: block;
+      text-decoration: none;
+      &-avatar{
+        position: absolute;
+        top:0;
+        left:0;
+        width:60px;
+        height:60px;
+        border-radius: 4px;
+        overflow:hidden;
+        img {
+          max-width:60px;
+          display: block;
+
+        }
+      }
+      &-name {
+        margin-left:75px;
+        display: block;
+        font-family: @ffBold;
+        font-size: 20px;
+        color:#2e2e2e;
+        padding-bottom:2px;
+      }
+      &-userid{
+        margin-left:75px;
+        display: block;
+        font-size: 16px;
+        color:@red;
+      }
+      &-date {
+        margin-left:75px;
+        display: block;
+        font-size: 14px;
+        font-family: @ffThinItalic;
+        color:#707070;
+
+      }
+
+    }
+    &-content {
+      padding:0 0 10px;
+      color:#777;
+      font-size: 18px;
+      font-family: @ffRegular;
+      a {
+        color:@red;
+      }
+    }
+    &-retwitted {
+      color:#84abaa;
+      padding:0 0 15px;
+      a {
+        color:#84abaa;
+        &:before {
+          content:"";
+          width:28px;
+          height:16px;
+          display: inline-block;
+          background:url("@{img}ico-retweet.png") center center no-repeat;
+          position: relative;
+          margin-right:4px;
+          top:2px;
+        }
+      }
+    }
+    &-image {
+      border-radius: 4px;
+      overflow:hidden;
+      margin-bottom:15px;
+      img {
+        max-width:100%;
+        display: block;
+
+      }
+    }
+    &-footer {
+      color:#84abaa;
+      padding:0 0 15px;
+      font-family: @ffMedium;
+      b {
+        font-family: @ffBold;
+      }
+      &-retwitted {
+        color:#84abaa;
+      }
+      &-favorites {
+        color:#84abaa;
+      }
+    }
+  }
+  &-footer {
+    height:80px;
+    background:#74b9b4;
+    position: absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    a {
+      display: block;
+      background:#fff;
+      height:40px;
+      border-radius: 4px;
+      margin: 20px 30px 20px 30px;
+      line-height: 40px;
+      text-align: center;
+      color:#6c6c6c;
+      text-decoration: none;
+      font-size: 18px;
+      span {
+        color:@red;
+      }
+    }
+  }
+
+}
+
+
+
+@media only screen and (min-width : @desktop-min) and (max-width : @desktop-max)  {
+  .twitter {
+    &-content {
+      padding:15px;
+      height: calc(~"100% - 30px");
+      h3 {
+        font-size: 25px;
+      }
+    }
+    &-head {
+      position: relative;
+      padding-bottom:35px;
+      border-bottom:1px solid #cccccc;
+      margin-bottom:20px;
+      &-follow {
+        position: absolute;
+        bottom: 10px;
+        right:0;
+        padding: 2px 7px 1px;
+        font-size: 13px;
+        vertical-align: middle;
+
+        &:before {
+          content:"";
+          width:21px;
+          height:18px;
+          display: inline-block;
+          background:url("@{img}ico-twitter.png") center center no-repeat;
+          position: relative;
+          margin-right:2px;
+          top:-1px;
+          vertical-align: middle;
+          transform: scale(0.7);
+
+        }
+      }
+      &-userid {
+        color:@red;
+        font-size: 13px;
+        font-family: @ffRegular;
+        position: absolute;
+        bottom: 10px;
+        left:0;
+      }
+
+    }
+
+    &-feed {
+      position: relative;
+      overflow-y: scroll;
+      margin-right:-10px;
+      padding-right:10px;
+      height:calc(~"100% - 170px");
+    }
+    &-post {
+      .clearfix();
+      &-head {
+        position: relative;
+        padding-bottom:15px;
+        display: block;
+        text-decoration: none;
+        &-avatar{
+          position: absolute;
+          top:0;
+          left:0;
+          width:45px;
+          height:45px;
+          border-radius: 4px;
+          overflow:hidden;
+          img {
+            max-width:45px;
+            display: block;
+
+          }
+        }
+        &-name {
+          margin-left:55px;
+          display: block;
+          font-family: @ffBold;
+          font-size: 16px;
+          color:#2e2e2e;
+          padding-bottom:2px;
+        }
+        &-userid{
+          margin-left:55px;
+          display: block;
+          font-size: 14px;
+          color:@red;
+        }
+        &-date {
+          margin-left:55px;
+          display: block;
+          font-size: 12px;
+          font-family: @ffThinItalic;
+          color:#707070;
+
+        }
+
+      }
+      &-content {
+        padding:0 0 10px;
+        color:#777;
+        font-size: 14px;
+        font-family: @ffRegular;
+        a {
+          color:@red;
+        }
+      }
+      &-retwitted {
+        color:#84abaa;
+        padding:0 0 15px;
+        font-size: 13px;
+        a {
+          color:#84abaa;
+          &:before {
+            content:"";
+            width:28px;
+            height:16px;
+            display: inline-block;
+            background:url("@{img}ico-retweet.png") center center no-repeat;
+            position: relative;
+            margin-right:4px;
+            top:2px;
+
+          }
+        }
+      }
+      &-image {
+        border-radius: 4px;
+        overflow:hidden;
+        margin-bottom:15px;
+        img {
+          max-width:100%;
+          display: block;
+
+        }
+      }
+      &-footer {
+        color:#84abaa;
+        padding:0 0 15px;
+        font-family: @ffMedium;
+        font-size: 13px;
+        b {
+          font-family: @ffBold;
+        }
+        &-retwitted {
+          color:#84abaa;
+        }
+        &-favorites {
+          color:#84abaa;
+        }
+      }
+    }
+    &-footer {
+      height:80px;
+      background:#74b9b4;
+      position: absolute;
+      bottom:0;
+      left:0;
+      width:100%;
+      a {
+        display: block;
+        background:#fff;
+        height:40px;
+        border-radius: 4px;
+        margin: 20px 30px 20px 30px;
+        line-height: 43px;
+        text-align: center;
+        color:#6c6c6c;
+        text-decoration: none;
+        font-size: 13px;
+        span {
+          color:@red;
+        }
+      }
+    }
+
+  }
 }

@@ -10,7 +10,6 @@
         color:@white;
       }
     }
-
   }
   &-head {
     border-bottom:1px solid #cccccc;
@@ -23,16 +22,16 @@
 
   }
   &-image {
-    margin:30px 0 10px;
+    margin:25px 0 10px;
     img {
       max-width: 100%;
-
+      display: block;
     }
   }
   &-text {
     font-size: 17px;
     line-height: 26px;
-    font-family: @ffThin;
+    font-family: @ffLight;
     p {
       margin:10px 0 15px;
     }
@@ -47,6 +46,31 @@
       font-family: @ffThin;
       font-size: 20px;
 
+    }
+  }
+}
+.blog-readall {
+  height:100px;
+  text-align: center;
+  overflow:hidden;
+  a {
+    position: relative;
+    &:before, &:after {
+      content:"";
+      display: block;
+      width:600px;
+      position: absolute;
+      top:50%;
+      height:1px;
+      background: #dddddd;
+    }
+    &:before {
+      left:100%;
+      margin-left:20px;
+    }
+    &:after {
+      right:100%;
+      margin-right:20px;
     }
   }
 }
@@ -65,6 +89,11 @@
         height:400px;
         background: @white;
         box-shadow:0 1px 3px rgba(0,0,0,0.14);
+        &.twitter {
+          position: absolute;
+          top:0;
+          right:0;
+        }
         &.min-tile {
           width:268px;
         }
@@ -80,7 +109,6 @@
         &.ld-h2 {
           height:820px;
         }
-
       }
     }
   }
@@ -108,10 +136,15 @@
       }
     }
   }
+  .ld-w1.ld-h1 .blog-tile-image + .blog-tile-text {
+    max-height:83px;
+    overflow: hidden;
+  }
 }
 
 @media only screen and (min-width : @desktop-min) and (max-width : @desktop-max)  {
 .blog-tile {
+
   &-content {
     padding:15px;
   }
@@ -129,17 +162,19 @@
     }
   }
   &-text {
-
     font-size: 12px;
     line-height: 14px;
-    font-family: @ffThin;
+    color:#4d4d4d;
+    font-family: @ffLight;
     .d-w2 & {
+      font-family: @ffRegular;
       font-size: 15px;
       line-height: 17px;
     }
     p {
       margin:10px 0 15px;
     }
+
   }
   &-more {
     position: absolute;
@@ -152,6 +187,9 @@
       font-size: 15px;
 
     }
+  }
+  &-content:hover .blog-tile-text {
+    color:#fff;
   }
 }
 
@@ -169,6 +207,11 @@
         height:400px;
         background: @white;
         box-shadow:0 1px 3px rgba(0,0,0,0.14);
+        &.twitter {
+          position: absolute;
+          top:0;
+          right:0;
+        }
         &.min-tile {
           width:180px;
         }
@@ -184,7 +227,11 @@
         &.d-h2 {
           height:540px;
         }
+        &:nth-child(3),&:nth-child(4),&:nth-child(5){
+          display: none;
+        }
       }
+
     }
   }
   .blog-tile {

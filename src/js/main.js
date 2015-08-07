@@ -18,18 +18,38 @@
 
 $(document).ready(function(){
 
-  var offersContainer = document.querySelector('.offers-container .grid');
-  $('.offers-container .grid').masonry({
-    columnWidth: offersContainer.querySelector('.min-tile'),
-    itemSelector:'.tile',
-    gutter:0,
-    percentPosition: false
-  });
-  var blogContainer = document.querySelector('.blog-container .grid');
-  $('.blog-container .grid').masonry({
-    columnWidth: blogContainer.querySelector('.min-tile'),
-    itemSelector:'.tile',
-    gutter:0,
-    percentPosition: false
-  })
+  if ($('.offers-container .grid').length){
+    var offersContainer = document.querySelector('.offers-container .grid');
+    $('.offers-container .grid').masonry({
+      columnWidth: offersContainer.querySelector('.min-tile'),
+      itemSelector:'.tile',
+      gutter:0,
+      percentPosition: false
+    });
+  }
+  if ($('.blog-container .grid').length){
+    var blogContainer = document.querySelector('.blog-container .grid');
+    $('.blog-container .grid').masonry({
+      columnWidth: blogContainer.querySelector('.min-tile'),
+      itemSelector:'.tile',
+      gutter:0,
+      percentPosition: false,
+      stamp: '.twitter'
+    })
+  }
+
+  if ($(".js-tab-menu").length){
+    $(".js-tab-menu a").on('click', function(){
+      var self = $(this);
+      var dataTabId = self.attr('data-tab-id');
+      if (!self.is('.active')) {
+        self.parent().find('a').removeClass('active');
+        self.addClass('active');
+        $(".js-tab").removeClass('active')
+        $(".js-tab-id-"+dataTabId).addClass('active')
+      }
+      return false;
+    });
+  }
+
 })
