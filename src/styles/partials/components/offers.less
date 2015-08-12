@@ -427,12 +427,12 @@
 @media only screen and (max-width : @tablet-portrait-max)  {
   .offer-big {
     &-center {
-      padding-top:120px;
+      padding-top:25vw;
       &-h2 {
         font-size: 9vw;
         line-height: 7vw;
         b {
-          font-size: 11.8vw;
+          font-size: 10.5vw;
           line-height: 13vw;
         }
       }
@@ -443,18 +443,24 @@
       }
       .btn.transparent {
         display: block;
-        height: 8vw;
-        line-height: 8.5vw;
-        font-size: 3.2vw;
+        height: 14vw;
+        line-height: 14vw;
+        font-size: 5.2vw;
+        border-width: 1px;
       }
     }
   }
   .offer-1 {
     height:auto;
     padding-bottom:50px;
+    background-position: 75% center;
     hr {
       width:auto!important;
       margin:15px 0;
     }
   }
+  .offer-2, .offer-3, .offer-4, .offers-container, .blog-container {
+    display: none;
+  }
+
 }

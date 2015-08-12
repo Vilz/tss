@@ -14,7 +14,6 @@ html {
   font-family: @ffLight;
 }
 html, body {
-  min-width: 1460px;
   background: @bggray;
 }
 a {
@@ -39,8 +38,6 @@ font-family: 'PF Din Display Pro'
 .container {
   position: relative;
   margin:0 auto;
-  padding: 0 20px;
-  width: 1420px;
 }
 
 
@@ -60,7 +57,15 @@ font-family: 'PF Din Display Pro'
 
 
 
-
+@media only screen and (min-width : @large-desktop)  {
+  html, body {
+    min-width: 1460px;
+  }
+  .container {
+    padding: 0 20px;
+    width: 1420px;
+  }
+}
 
 
 @media only screen and (min-width : @desktop-min) and (max-width : @desktop-max)  {
@@ -78,7 +83,6 @@ font-family: 'PF Din Display Pro'
 
 @media only screen and (max-width : @tablet-portrait-max)  {
   html, body {
-    min-width: auto;
     background: @bggray;
   }
   .container {
