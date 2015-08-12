@@ -52,4 +52,8 @@ $(document).ready(function(){
     });
   }
 
+  $(".header-menu-toggler").on('click', function(){
+    $(".header-menu").toggleClass("active");
+    return false;
+  })
 })

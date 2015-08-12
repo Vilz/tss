@@ -76,6 +76,15 @@ font-family: 'PF Din Display Pro'
   }
 }
 
-@media only screen and (max-width : @tablet-album-max)  {
-
+@media only screen and (max-width : @tablet-portrait-max)  {
+  html, body {
+    min-width: auto;
+    background: @bggray;
+  }
+  .container {
+    position: relative;
+    margin:0 auto;
+    padding: 0 20px;
+    width: auto;
+  }
 }
