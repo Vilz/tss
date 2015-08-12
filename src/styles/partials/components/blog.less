@@ -227,7 +227,7 @@
         &.d-h2 {
           height:540px;
         }
-        &:nth-child(3),&:nth-child(4),&:nth-child(5){
+        &:nth-child(3),&:nth-child(5),&:nth-child(6){
           display: none;
         }
       }
@@ -260,5 +260,111 @@
 }
 
 @media only screen and (max-width : @tablet-portrait-max)  {
+.blog-tile {
+  &-content {
+    padding:15px;
+  }
+  &-head {
+    padding-bottom:2vw;
+    margin-bottom:4vw;
+    font-size: 8vw;
+    line-height: 8vw;
+    min-height: 8vw;
+  }
+  &-image {
+    margin:15px 0 10px;
+    img {
+      max-width: 100%;
+    }
+  }
+  &-text {
+    font-size: 12px;
+    line-height: 14px;
+    color:#4d4d4d;
+    font-family: @ffLight;
+    .d-w2 & {
+      font-family: @ffRegular;
+      font-size: 15px;
+      line-height: 17px;
+    }
+    p {
+      margin:10px 0 15px;
+    }
 
+  }
+  &-more {
+    position: relative;
+    bottom:auto;
+    left:auto;
+    margin-top:15px;
+    a {
+      color:@red;
+      font-family: @ffThin;
+      font-size: 15px;
+
+    }
+  }
+  &-content:hover .blog-tile-text {
+    color:#fff;
+  }
+}
+
+
+  .blog-container {
+    .grid {
+      margin-top:60px;
+      margin-left:0px;
+      margin-bottom:45px;
+      .clearfix();
+      .tile {
+        margin-left:0px;
+        margin-bottom:20px;
+        width:100%;
+        height:auto;
+        background: @white;
+        box-shadow:0 1px 3px rgba(0,0,0,0.14);
+        &.twitter {
+          position: relative;
+          top:auto;
+          bottom:auto;
+          left:auto;
+          right:auto;
+          display: block;
+        }
+        &.min-tile {
+          width:100%;
+        }
+        &.m-w1 {
+          width:100%;
+        }
+
+        &.d-h1 {
+          height:auto;
+        }
+
+        &.m-hide{
+          display: none;
+        }
+      }
+
+    }
+  }
+
+  .blog-readall {
+    height:100px;
+    text-align: center;
+    overflow:hidden;
+    a {
+      display: block;
+      height: 14vw;
+      line-height: 14vw;
+      font-size: 5.2vw;
+      border-width: 1px;
+      position: relative;
+      &:before, &:after {
+        display: none;
+      }
+
+    }
+  }
 }

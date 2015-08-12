@@ -426,6 +426,14 @@
 }
 @media only screen and (max-width : @tablet-portrait-max)  {
   .offer-big {
+    &.black {
+      &.with-margins {
+        .container {
+          margin-top:0px;
+          margin-bottom:0px;
+        }
+      }
+    }
     &-center {
       padding-top:25vw;
       &-h2 {
@@ -433,7 +441,7 @@
         line-height: 7vw;
         b {
           font-size: 10.5vw;
-          line-height: 13vw;
+          line-height: 11vw;
         }
       }
       &-h3 {
@@ -449,18 +457,120 @@
         border-width: 1px;
       }
     }
+    &-right {
+      padding:10vw 0;
+      margin:0;
+      width:auto;
+      &-h2 {
+        font-size: 9vw;
+        line-height: 9vw;
+        text-align: center;
+        margin-bottom: 110vw;
+
+      }
+      &-h3 {
+        font-size: 6vw;
+        line-height: 7vw;
+        text-align: center;
+        margin-bottom: 10vw;
+      }
+      .btn.red {
+        display: block;
+        height: 14vw;
+        line-height: 14vw;
+        font-size: 5.2vw;
+        border-width: 1px;
+      }
+      hr {
+        display: none;
+
+      }
+    }
   }
   .offer-1 {
     height:auto;
-    padding-bottom:50px;
+    padding-bottom:20vw;
     background-position: 75% center;
     hr {
       width:auto!important;
       margin:15px 0;
     }
   }
-  .offer-2, .offer-3, .offer-4, .offers-container, .blog-container {
-    display: none;
+  .offer-2 {
+    height:auto;
+    background-size: 200%;
+    background-position: 10% 30vw;
   }
+  .offer-3 {
+    height:auto;
+    .container {
+      padding: 0 20px;
+      height: auto;
+      padding-bottom:20vw;
+    }
+    .offer-big-center {
+      padding-top:20vw;
+    }
+    hr {
+      width:auto!important;
+    }
+  }
+  .offers-container {
+    .container {
+      padding:0;
+    }
+    .grid {
+      margin-top:30px;
+      .clearfix();
+      margin-left:0px;
+      .tile {
+        margin-left:0px;
+        margin-bottom:20px;
+        width:100%;
+        height:65vw;
+        background: #ccc;
+        &.m-hide {
+          display: none;
+        }
+        &.min-tile {
+          width:100%;
+        }
+        &.m-w1, .min-tile {
+          width:100%;
+        }
+
+        &.m-h1 {
+          height:65vw;
+        }
+      }
+    }
+  }
+  .offer-tile {
+    &-description {
+      padding: 15px 60px 15px 15px;
+    }
+    &-title {
+      font-size: 5vw;
+    }
+    &-text {
+
+      font-size: 3.5vw;
+      line-height: 3.2vw
+    }
+    &-more {
+      .m-w1 & {
+        bottom:auto;
+        top:50%;
+        margin-top: -13px;
+        .btn {
+          display: none;
+        }
+        .ico {
+          display: block;
+        }
+      }
+    }
+  }
+
 
 }

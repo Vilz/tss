@@ -33,8 +33,8 @@ $(document).ready(function(){
       columnWidth: blogContainer.querySelector('.min-tile'),
       itemSelector:'.tile',
       gutter:0,
-      percentPosition: false,
-      stamp: '.twitter'
+      percentPosition: false//,
+      //stamp: '.twitter'
     })
   }
 
