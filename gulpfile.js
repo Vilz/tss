@@ -1,6 +1,7 @@
 'use strict';
 
 var gulp = require('gulp'),
+    plumber = require('gulp-plumber'),
     watch = require('gulp-watch'),
     prefixer = require('gulp-autoprefixer'),
     uglify = require('gulp-uglify'),
@@ -65,6 +66,7 @@ gulp.task('openbrowser', function() {
 
 gulp.task('html:build', function () {
     gulp.src(path.src.html)
+        .pipe(plumber())
         .pipe(rigger())
         .pipe(gulp.dest(path.build.html))
         .pipe(connect.reload());
@@ -72,6 +74,7 @@ gulp.task('html:build', function () {
 
 gulp.task('js:build', function () {
     gulp.src(path.src.js)
+        .pipe(plumber())
         .pipe(rigger())
         .pipe(sourcemaps.init())
         .pipe(uglify())
@@ -82,6 +85,7 @@ gulp.task('js:build', function () {
 
 gulp.task('style:build', function () {
     gulp.src(path.src.style)
+        .pipe(plumber())
         .pipe(sourcemaps.init())
         .pipe(less())
         .pipe(prefixer())
@@ -93,6 +97,7 @@ gulp.task('style:build', function () {
 
 gulp.task('image:build', function () {
     gulp.src(path.src.img)
+        .pipe(plumber())
         .pipe(imagemin({
             progressive: true,
             svgoPlugins: [{removeViewBox: false}],
@@ -105,11 +110,13 @@ gulp.task('image:build', function () {
 
 gulp.task('fonts:build', function() {
     gulp.src(path.src.fonts)
+        .pipe(plumber())
         .pipe(gulp.dest(path.build.fonts))
 });
 
 gulp.task('favicons:build', function() {
     gulp.src(path.src.favicons)
+        .pipe(plumber())
         .pipe(gulp.dest(path.build.favicons))
 });
 

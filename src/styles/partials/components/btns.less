@@ -13,19 +13,40 @@
   background: @black;
   text-decoration: none;
   font-family: @ffThin;
+  transition: background .2s ease, border-color .2s ease;
   &:hover {
     color:@white;
   }
   &.transparent {
-    background: rgba(0,0,0,0.33);
+    background: rgba(0,0,0,0.3);
     border:2px solid @white;
+    border-color: @white;
     line-height: 44px;
+    &.small {
+      &:hover {
+        background: rgba(0,0,0,0.8);
+        border-color: @white;
+      }
+    }
+    &:hover {
+      //background: rgba(255,255,255, 0.2);
+      //border-color: rgba(117, 185, 180, 1);
+      background: rgba(117, 185, 180, 0.3);
+    }
   }
   &.red {
     background: @red;
+    //border:2px solid @red;
+    &:hover {
+      background: rgba(117, 185, 180, 1);
+      //background: fadeout(@red,30%);
+    }
   }
   &.white {
     background: @white;
     color:@black;
+    &:hover {
+      background:#e6e6e6;
+    }
   }
 }

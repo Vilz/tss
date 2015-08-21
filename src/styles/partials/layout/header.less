@@ -1,6 +1,8 @@
 .header {
   height:80px;
   background: linear-gradient(to right, #fff 0%, #fff 50%, #f2f2f2 50%, #f2f2f2 100%);
+  position: relative;
+  z-index: 10;
   .container {
     width:980px;
     height:100%;
@@ -34,9 +36,43 @@
       display: inline-block;
       font-size: 14px;
       text-transform: uppercase;
+      position: relative;
       a {
         text-decoration: none;
         margin:0 13px;
+      }
+      ul {
+        max-height: 0;
+        box-sizing: border-box;
+        overflow:hidden;
+        position: absolute;
+        top:30px;
+        left:-20px;
+        background:#fff;
+        margin:0;
+        padding:0;
+        transition: max-height 0.3s ease-in-out;
+        li {
+          margin:0 5px;
+          text-transform: none;
+          display: block;
+          min-width: 200px;
+          &:first-child{
+            margin-top:15px;
+          }
+          &:last-child{
+            margin-bottom:10px;
+          }
+          a {
+            display: block;
+            padding: 5px 13px 5px 13px;
+          }
+        }
+      }
+      &.active {
+        ul {
+          max-height: 350px;
+        }
       }
     }
     &-toggler {
@@ -144,34 +180,62 @@
     }
     &-menu {
       position: absolute;
-      top:-500px;
-      left:0;
-      width:100%;
-      background: @bggray;
+      top:60px;
+      left:-100%;
+      width:90%;
+      background: rgba(0,0,0,0.9);
       height:auto;
       margin: 0;
       padding:60px 0 10px;
-      transition: top 0.3s ease;
+      transition: left 0.3s ease;
       z-index: 1;
       &.active {
         top:60px;
+        left:0;
       }
 
       li {
         display: block;
         float: none;
-        text-align: center;
-        height:50px;
-        line-height: 50px;
-        font-size: 18px;
-        margin:5px 30px;
-        border-bottom: 1px solid #ccc;
-        &:last-child {
-          border-bottom: none;
-        }
-        a {
-          display: block;
+        text-align: left;
+        font-size: 20px;
+        margin:5px 0px;
 
+        font-family: @ffLight;
+        a {
+          padding:15px 30px;
+          margin:0;
+          display: block;
+          color:#fff;
+
+        }
+        ul {
+          position: relative;
+          top:auto;
+          left:auto;
+          background:none;
+          padding:0;
+          max-height:500px;
+          li {
+            font-size: 16px;
+            text-transform: uppercase;
+            display: block;
+            min-width: initial;
+            margin:0;
+
+            &:first-child{
+              margin-top:0;
+            }
+            &:last-child{
+              margin-bottom:0;
+            }
+
+            a {
+              display: block;
+              padding: 10px 30px 10px 60px;
+              margin:0;
+            }
+          }
         }
       }
       &-toggler {
@@ -191,11 +255,26 @@
           background: #000;
           top:0;
           left:0;
+          transition: opacity 0.1s linear, transform 0.1s ease;
+          opacity:1;
           &:nth-child(2){
             top:10px;
           }
           &:nth-child(3){
             top:20px;
+          }
+        }
+        &.active {
+          span {
+            &:nth-child(1){
+              transform: translateY(10px) translateX(0) rotate(40deg);
+            }
+            &:nth-child(3){
+              transform: translateY(-10px) translateX(0) rotate(-40deg);
+            }
+            &:nth-child(2){
+              opacity: 0
+            }
           }
         }
       }

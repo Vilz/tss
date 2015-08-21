@@ -17,6 +17,7 @@
     "gulp-rigger": "*",
     "gulp-uglify": "*",
     "gulp-watch": "*",
+    "gulp-plumber": "*",
     "imagemin-pngquant": "*",
     "opn": "*",
     "rimraf": "*"
